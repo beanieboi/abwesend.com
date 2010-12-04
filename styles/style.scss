@@ -11,6 +11,13 @@ html, body {
   background-color: #404040;
 }
 
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Droid Serif'), local('DroidSerif'), url('../fonts/droid-serif.ttf') format('truetype');
+}
+
 #page {
   width: 350px;
   text-align: left;
