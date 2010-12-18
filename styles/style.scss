@@ -1,6 +1,10 @@
 /* Variables */
-$title-fontcolor: #A1A1A1;
-$title-fontcolor-hover: #333;
+$title-fontcolor: #CE534D;
+$background-color: #DED4B9;
+$text-color: #46433A;
+$link-color: $text-color;
+$cyan-link-color: #64B6B1;
+$link-color-hover:  darken($cyan-link-color, 10%);
 
 html, body {
   padding: 20px 0px 20px 0px;
@@ -8,7 +12,7 @@ html, body {
   text-align: center;
   font-family: 'Droid Serif';
   background: url("../images/bg.png") repeat scroll 0 0 #E8E8E8;
-  background-color: #404040;
+  background-color: $background-color;
 }
 
 @font-face {
@@ -28,7 +32,7 @@ html, body {
     padding-bottom: 10px;
 
     .title {
-      text-shadow: white 1px 1px 0px;
+      text-shadow: lighten($background-color, 10%) 1px 1px 0px;
       font-size: 19px;
       color: $title-fontcolor;
       text-transform: uppercase;
@@ -40,7 +44,8 @@ html, body {
     }
 
     .content {
-      font-size: 13px;
+      font-size: 14px;
+      color: $text-color;
       padding-top: 4px;
       padding-left: 8px;
       padding-bottom: 5px;
@@ -48,7 +53,7 @@ html, body {
       .presentation {
         .venue {
           a {
-            color: darken($title-fontcolor, 20%);
+            color: $link-color;
           }
         }
         .topic {
@@ -87,11 +92,11 @@ html, body {
 
 a {
   &:visited {
-    color: $title-fontcolor;
+    color: $link-color;
   }
   &:hover {
-    color: $title-fontcolor-hover;
+    color: $link-color-hover;
   }
   text-decoration: none;
-  color: $title-fontcolor;
+  color: $link-color;
 }
