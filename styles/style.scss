@@ -27,10 +27,6 @@ html, body {
   .item {
     padding-bottom: 10px;
 
-    span.title:hover {
-       color: $title-fontcolor-hover;
-    }
-
     .title {
       text-shadow: white 1px 1px 0px;
       font-size: 19px;
