@@ -1,0 +1,55 @@
+html, body {
+  background: #EBEBEB;
+  color: #595959;
+  font: 12px Helvetica, Arial, sans-serif;
+}
+
+a {
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none !important;
+  }
+  color: #222222;
+  text-decoration: none;
+  -webkit-transition: linear opacity .05s;
+}
+
+#page {
+  .header {
+    color: #595959;
+  }
+
+  .content {
+    margin: 0px;
+    padding: 0px;
+
+    .posts {
+      .post {
+        background: white;
+
+        -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+        -webkit-border-radius: 0 0 3px 3px;;
+        -moz-border-radius: 0 0 3px 3px;
+        border-radius: 0 0 3px 3px;
+
+        margin: 0 0 60px;
+
+        .photo {
+        }
+        .content, .date {
+          padding: 10px 30px;
+        }
+
+        .footer {
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+
+  padding: 0px 50px;
+  width: 500px;
+}
