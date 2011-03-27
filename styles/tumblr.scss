@@ -4,16 +4,6 @@ html, body {
   font: 12px Helvetica, Arial, sans-serif;
 }
 
-a {
-  &:hover {
-    opacity: 0.8;
-    text-decoration: none !important;
-  }
-  color: #222222;
-  text-decoration: none;
-  -webkit-transition: linear opacity .05s;
-}
-
 #page {
   .header {
     color: #595959;
@@ -31,7 +21,7 @@ a {
         -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 
-        -webkit-border-radius: 0 0 3px 3px;;
+        -webkit-border-radius: 0 0 3px 3px;
         -moz-border-radius: 0 0 3px 3px;
         border-radius: 0 0 3px 3px;
 
@@ -44,6 +34,15 @@ a {
         }
 
         .footer {
+          a {
+            &:hover {
+              opacity: 0.8;
+              text-decoration: none !important;
+            }
+            color: #222222;
+            text-decoration: none;
+            -webkit-transition: linear opacity 0.1s;
+          }
           padding: 10px 30px;
         }
       }
