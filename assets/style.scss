@@ -11,7 +11,7 @@ html, body {
   margin: 0;
   text-align: center;
   font-family: 'Droid Serif';
-  background: url("../images/bg.png") repeat scroll 0 0 #E8E8E8;
+  background: url("../assets/bg.png") repeat scroll 0 0 #E8E8E8;
   background-color: $background-color;
 }
 
@@ -19,7 +19,7 @@ html, body {
   font-family: 'Droid Serif';
   font-style: normal;
   font-weight: normal;
-  src: local('Droid Serif'), local('DroidSerif'), url('../fonts/droid-serif.ttf') format('truetype');
+  src: local('Droid Serif'), local('DroidSerif'), url('../assets/droid-serif.ttf') format('truetype');
 }
 
 #page {
@@ -80,13 +80,13 @@ html, body {
         }
 
         .twitter {
-          background-image: url(../images/twitter.png);
+          background-image: url(../assets/twitter.png);
         }
         .facebook {
-          background-image: url(../images/facebook.png);
+          background-image: url(../assets/facebook.png);
         }
         .tumblr {
-          background-image: url(../images/tumblr.png);
+          background-image: url(../assets/tumblr.png);
         }
       }
     }
