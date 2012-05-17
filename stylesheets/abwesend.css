@@ -1,0 +1,72 @@
+html {
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+body {
+  font: 100% 'Lato', Helvetica Neue, Arial, sans-serif;
+  text-shadow: #0D1F3A 1px 1px 1px;
+  text-transform: uppercase;
+  padding: 0px;
+  margin: 0px; }
+
+header {
+  display: inline-block;
+  margin-bottom: 15px; }
+  header h1 {
+    font-size: 2.5em;
+    padding: 0px 20px;
+    background-color: black;
+    margin-bottom: 0px; }
+  header span {
+    font-weight: 100;
+    padding: 0px 20px;
+    background-color: black;
+    margin-top: 0px;
+    padding-bottom: 8px; }
+
+section {
+  font-size: 1.5em;
+  margin-top: 5px;
+  line-height: 1.7; }
+  section span {
+    background-color: black; }
+  section li:first-child {
+    color: #B43;
+    padding-left: 20px; }
+  section ul {
+    list-style: none outside none;
+    padding-left: 0px;
+    display: inline;
+    margin: 0; }
+  section li {
+    font-weight: 100;
+    display: inline;
+    background-color: black;
+    padding: 5px; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+  a:hover {
+    color: #B43; }
+
+.content {
+  left: 0px;
+  margin-top: 4%;
+  color: #fff;
+  text-align: left; }
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Lato Bold"), local("Lato-Bold"), url("../fonts/lato.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Lato Hairline"), local("Lato-Hairline"), url("../fonts/lato-light.woff") format("woff"); }
