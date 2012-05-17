@@ -21,11 +21,13 @@ header {
     background-color: black;
     margin-bottom: 0px; }
   header span {
-    font-weight: 100;
     padding: 0px 20px;
     background-color: black;
     margin-top: 0px;
     padding-bottom: 8px; }
+    @media screen and (min-width: 1024px) {
+      header span {
+        font-weight: 100; } }
 
 section {
   font-size: 1.5em;
@@ -42,10 +44,12 @@ section {
     display: inline;
     margin: 0; }
   section li {
-    font-weight: 100;
     display: inline;
     background-color: black;
     padding: 5px; }
+    @media screen and (min-width: 1024px) {
+      section li {
+        font-weight: 100; } }
 
 a {
   color: #fff;
