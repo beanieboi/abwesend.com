@@ -9,8 +9,8 @@ set :user,        'ben'
 set :use_sudo,    false
 set :deploy_via,  :remote_cache
 set :normalize_asset_timestamps, false
+default_run_options[:pty] = true
 
-after 'deploy:finalize_update', 'deploy:symlink_config'
 after 'deploy',                 'deploy:cleanup'
 
 role :app, "inno"
@@ -22,4 +22,10 @@ namespace :deploy do
       run "/etc/init.d/unicorn_#{application} #{command}"
     end
   end
+
+  task :setup_config, roles: :app do
+    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
+    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+  end
+  after "deploy:setup", "deploy:setup_config"
 end
