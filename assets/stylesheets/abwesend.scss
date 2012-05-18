@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  background: url(../images/background.jpg) no-repeat center center fixed;
+  background: asset-url("background_0.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -83,11 +83,11 @@ a {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url('../fonts/lato.woff') format('woff');
+  src: local('Lato Bold'), local('Lato-Bold'), asset-url("lato.woff", $digest: true) format('woff');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), url('../fonts/lato-light.woff') format('woff');
+  src: local('Lato Hairline'), local('Lato-Hairline'), asset-url("lato-light.woff", $digest: true) format('woff');
 }
