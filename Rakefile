@@ -1,34 +1,17 @@
 #!/usr/bin/env rake
 require "rubygems"
 require "bundler"
-require 'digest/md5'
-require "fileutils"
-Bundler.require
-
-task :default => [:minify]
-
-task :minify do
-  minify_file("index.html.erb", "index.html")
-
-  def minify_file(input, output)
-    html = File.read(input)
-    minified = html.gsub(/$\s*/, "").gsub("\n", "")
-    File.open(output, 'w') {|f| f.write(minified) }
-  end
-end
-
-task :environment do
-  require './app'
-end
+require './app'
+require "guard/sprockets2"
 
 namespace :assets do
-  desc "Compile all the assets"
-  task :precompile => :environment do
-    raise "Not implemented yet"
-  end
+  desc 'precompile assets'
+  task :precompile do
 
-  desc "Remove compiled assets"
-  task :clean => :environment do
-    raise "Not implemented yet"
+    options = { :sprockets => App.sprockets, :assets_path => App.assets_path,
+                :precompile => App.precompile, :digest => App.digest_assets}
+    @compiler = Guard::Sprockets2::Compiler.new(options)
+    @compiler.clean
+    @compiler.compile
   end
 end
