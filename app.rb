@@ -8,6 +8,13 @@ class App < Sinatra::Base
   set :digest_assets, true
   set(:assets_path)   { File.join public_folder, assets_prefix }
 
+  configure :production do
+    use Rack::Cache,
+      verbose:     settings.development?,
+      metastore:   'memcached://localhost:11211/meta',
+      entitystore: 'memcached://localhost:11211/body?compress=true'
+  end
+
   configure do
     # Setup Sprockets
     sprockets.append_path File.join(root, "assets", "stylesheets")
@@ -29,6 +36,7 @@ class App < Sinatra::Base
   end
 
   get "/" do
+    expires 5 * 60, :public
     erb :index
   end
 end

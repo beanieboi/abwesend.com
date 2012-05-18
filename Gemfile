@@ -4,6 +4,8 @@ gem 'sinatra', :require => 'sinatra/base'
 gem 'capistrano'
 gem 'erubis'
 gem 'shotgun'
+gem 'rack-cache'
+gem 'dalli'
 
 gem 'sass'
 gem 'sprockets'
