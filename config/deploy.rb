@@ -45,6 +45,7 @@ namespace :abwesend do
   desc "Upload assets"
   task :upload_assets do
     upload("public/assets/assets.tgz", release_path + '/assets.tgz')
+    run_locally("rm -rf public/assets/*")
     run "cd #{release_path}; tar zxf assets.tgz; rm assets.tgz"
   end
 end
