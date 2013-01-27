@@ -36,7 +36,7 @@ class App < Sinatra::Base
   end
 
   get "/" do
-    expires 2 * 60, :public
+    # expires 2 * 60, :public
     erb :index
   end
 end
