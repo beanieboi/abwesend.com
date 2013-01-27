@@ -8,7 +8,7 @@ gem 'rack-cache'
 gem 'dalli'
 
 gem 'sass'
-gem 'sprockets', '= 2.5.0'
+gem 'sprockets'
 gem 'sprockets-sass'
 gem 'sprockets-helpers'
 gem 'coffee-script'
