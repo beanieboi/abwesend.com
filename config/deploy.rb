@@ -14,6 +14,7 @@ default_run_options[:pty] = true
 after 'deploy',                 'deploy:cleanup'
 after 'deploy:create_symlink',  'abwesend:upload_assets'
 before 'deploy:update_code',    'abwesend:compress_assets'
+after 'deploy:update_code',     'deploy:custom_symlink'
 
 role :app, "inno"
 
@@ -25,11 +26,10 @@ namespace :deploy do
     end
   end
 
-  task :setup_config, roles: :app do
-    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
-    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+  desc "Make symlink for database yaml"
+  task :custom_symlink do
+    run "ln -nfs #{shared_path}/assets #{release_path}/public/assets"
   end
-  after "deploy:setup", "deploy:setup_config"
 end
 
 namespace :abwesend do
@@ -37,15 +37,14 @@ namespace :abwesend do
   task :compress_assets do
     run_locally("rm -rf public/assets/*")
     run_locally("bundle exec rake assets:precompile")
-    run_locally("touch assets.tgz && rm assets.tgz")
-    run_locally("tar zcvf assets.tgz public/assets/")
-    run_locally("mv assets.tgz public/assets/")
   end
 
   desc "Upload assets"
   task :upload_assets do
-    upload("public/assets/assets.tgz", release_path + '/assets.tgz')
+    find_servers_for_task(current_task).each do |current_server|
+      run_locally("rsync --delete -avz -e ssh 'public/assets' '#{user}@#{current_server}:#{shared_path}'")
+    end
+
     run_locally("rm -rf public/assets/*")
-    run "cd #{release_path}; tar zxf assets.tgz; rm assets.tgz"
   end
 end
