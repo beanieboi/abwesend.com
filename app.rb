@@ -21,6 +21,7 @@ class App < Sinatra::Base
     sprockets.append_path File.join(root, "assets", "javascripts")
     sprockets.append_path File.join(root, "assets", "images")
     sprockets.append_path File.join(root, "assets", "fonts")
+    sprockets.version = "1.0"
 
     # Configure Sprockets::Helpers (if necessary)
     Sprockets::Helpers.configure do |config|
