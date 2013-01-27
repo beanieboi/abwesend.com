@@ -1,7 +1,6 @@
 #!/usr/bin/env rake
 require "rubygems"
-require "bundler"
-require './app'
+require_relative 'app'
 require "guard/sprockets2"
 
 namespace :assets do
