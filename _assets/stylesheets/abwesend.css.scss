@@ -79,11 +79,11 @@ a {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), asset-url("lato.woff", $digest: true) format('woff');
+  src: local('Lato Bold'), local('Lato-Bold'), asset-url("lato.woff") format('woff');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), asset-url("lato-light.woff", $digest: true) format('woff');
+  src: local('Lato Hairline'), local('Lato-Hairline'), asset-url("lato-light.woff") format('woff');
 }
