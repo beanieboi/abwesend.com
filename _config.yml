@@ -57,3 +57,9 @@ assets:
   #     output URL:   /assets/javascripts/app-4f41243847da693a4f356c0486114bc6.css
   #
   cachebust: hard
+  #
+  # Specifies list of MIME types that needs to have gzipped versions.
+  # You can set it to `false` to disable gzipping. Only javascripts and
+  # stylesheets are gzipped by default.
+  #
+  gzip: [ text/css, application/javascript ]
