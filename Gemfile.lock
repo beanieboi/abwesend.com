@@ -20,7 +20,7 @@ GEM
       liquid (~> 2.3)
       maruku (~> 0.5)
       pygments.rb (~> 0.3.2)
-    jekyll-assets (0.3.5)
+    jekyll-assets (0.3.6)
       jekyll
       sprockets (~> 2.9)
     kramdown (0.14.2)
