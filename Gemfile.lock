@@ -40,6 +40,7 @@ GEM
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rack (1.5.2)
+    sass (3.2.8)
     sprockets (2.9.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -56,3 +57,4 @@ DEPENDENCIES
   capistrano
   jekyll
   jekyll-assets
+  sass
