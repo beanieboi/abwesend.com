@@ -3,3 +3,4 @@
 .sass-cache/**/*
 ssl/**
 _site/**
+.jekyll-assets-cache
