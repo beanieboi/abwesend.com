@@ -5,7 +5,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
 
-  font: 100% 'Lato', Helvetica Neue, Arial, sans-serif;
+  font: 100% "HelveticaNeue-Thin", "Helvetica Neue Thin", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-shadow: #0D1F3A 1px 1px 1px;
   text-transform: uppercase;
   padding: 0px;
@@ -24,9 +24,6 @@ header {
   }
 
   span {
-    @media screen and (min-width: 1024px) {
-      font-weight: 100;
-    }
     padding: 0px 20px;
     background-color: black;
     margin-top: 0px;
@@ -52,9 +49,6 @@ section {
   }
 
   li {
-    @media screen and (min-width: 1024px) {
-      font-weight: 100;
-    }
     display: inline;
     background-color: black;
     padding: 5px;
@@ -72,17 +66,4 @@ a {
   margin-top: 4%;
   color: #fff;
   text-align: left;
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), asset-url("lato.woff") format('woff');
-}
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Lato Hairline'), local('Lato-Hairline'), asset-url("lato-light.woff") format('woff');
 }
