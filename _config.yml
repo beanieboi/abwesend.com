@@ -1,4 +1,4 @@
-exclude:  [ Gemfile, Gemfile.lock, deploy.rb, Capfile]
+exclude: [ Gemfile, Gemfile.lock, deploy.rb, Capfile ]
 #
 # Plugin: jekyll-assets
 #
@@ -21,17 +21,15 @@ assets:
     - _assets/images
     - _assets/fonts
   #
-  # Sets compressors for the specific types of file: `js`, or `css`.
-  # No compression by default.
+  # Sets JS compressor. No compression by default.
+  # Possible variants: 'yui', 'uglifier', nil
   #
-  # Possible variants:
+  js_compressor: uglifier
   #
-  #     css  => 'yui', 'sass', nil
-  #     js   => 'yui', 'uglifier', nil
+  # Sets CSS compressor. No compression by default.
+  # Possible variants: 'yui', 'sass', nil
   #
-  compress:
-    js:   uglifier
-    css:  sass
+  css_compressor: sass
   #
   # Sets cachebusting policy for generated assets.
   #
@@ -58,8 +56,24 @@ assets:
   #
   cachebust: hard
   #
+  # Whenever or not cache compiled assets (disabled by default).
+  # See `Compilation Cache` section of README for details.
+  #
+  cache: false
+  #
   # Specifies list of MIME types that needs to have gzipped versions.
   # You can set it to `false` to disable gzipping. Only javascripts and
   # stylesheets are gzipped by default.
   #
   gzip: [ text/css, application/javascript ]
+  #
+  # Does not concatenates files requested by `javascript` and `stylesheet`
+  # helpers. Instead outputs multiple files in order they are required.
+  # Default: false
+  #
+  debug: false
+  #
+  # Configuration version. Used to force cache invalidation.
+  # Default: 1
+  #
+  version: 1
