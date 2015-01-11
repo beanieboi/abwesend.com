@@ -1,4 +1,6 @@
 exclude: [ Gemfile, Gemfile.lock, deploy.rb, Capfile ]
+
+permalink: none
 #
 # Plugin: jekyll-assets
 #
