@@ -4,13 +4,13 @@
     <title>abwesend but alive</title>
     <meta charset="UTF-8"/>
     <meta name=keywords content="Benjamin Fritsch, ben, beanie, beanieboi"/>
-    {% stylesheet application %}
+    <%= stylesheet_link_tag :abwesend %>
     <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="{% asset_path favicon.ico %}" media="screen" rel="shortcut icon" type="image/x-icon" />
   </head>
   <body>
     <div class="content">
-      {{ content }}
+      <%= yield %>
     </div>
   </body>
 </html>

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+# Middleman Gems
+gem 'middleman', '>= 4.0.0'
+gem 'middleman-livereload'
+gem 'middleman-gh-pages'
 
-gem 'jekyll'
-gem 'jekyll-assets'
-gem 'capistrano', '~> 2.0'
