@@ -1,8 +1,5 @@
 language: ruby
-rvm:
-- 2.2.3
 before_install:
-- rvm use 2.4.1 --install
 - gem install image_optim_pack
 install:
 - bundle install --path vendor/bundle
