@@ -1,69 +1,87 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-rendering: optimizelegibility;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
 body {
+  background-color: #FFFDFF;
+  color: #111111;
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+  line-height: 1.66667;
+  font-size: 1rem
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+.grid{
+  max-width: 640px;
+  overflow: hidden;
+}
+
+@supports (display: grid) {
+  @media screen and (min-width: 320px) {
+    .grid{
+      max-width: 1280px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+      justify-content: end
+    }
+  }
+}
+
+.grid-item{
+  position: relative;
+}
+
+.grid-item:after{
+  content: '';
+  position: absolute;
+  box-sizing: content-box;
+  display: block;
+  left: 0;
+  top: 0;
   width: 100%;
-  background: url(image-path('background_5.jpg')) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  font: 100% "HelveticaNeue-Thin", "Helvetica Neue Thin", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  text-shadow: #0D1F3A 1px 1px 1px;
-  text-transform: uppercase;
-  padding: 0px;
-  margin: 0px;
+  height: 100%;
+  border-style: dashed;
+  border-color: #c3c5c7;
+  border-width: 0 1px 1px 0;
+  pointer-events: none;
 }
 
-header {
-  display: inline-block;
-  margin-bottom: 15px;
-
-  h1 {
-    font-size: 2.5em;
-    padding: 0px 20px;
-    background-color: black;
-    margin-bottom: 0px;
-  }
-
-  span {
-    padding: 0px 20px;
-    background-color: black;
-    margin-top: 0px;
-    padding-bottom: 8px;
-  }
+.flex{
+  display: flex;
 }
 
-section {
-  font-size: 1.5em;
-  margin-top: 5px;
-  line-height: 1.7;
+.flex-column{
+  flex-direction: column;
+}
 
-  li:first-child {
-    color: #B43;
-    padding-left: 20px;
-  }
+.justify-between{
+  justify-content: space-between;
+}
 
-  ul {
-    list-style: none outside none;
-    padding-left: 0px;
-    display: inline;
-    margin: 0;
-  }
-
-  li {
-    display: inline;
-    background-color: black;
-    padding: 5px;
-  }
+.padding-2 {
+  padding: 1.66667rem
 }
 
 a {
-  color: #fff;
-  text-decoration: none;
-  &:hover { color: #B43; }
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  touch-action: manipulation;
 }
 
-.content {
-  left: 0px;
-  margin-top: 4%;
-  color: #fff;
-  text-align: left;
+:link,:visited {
+  text-decoration:none;
 }
+
+:active,:hover {
+  outline: 0;
+}
+
