@@ -1,13 +1,11 @@
 language: ruby
 before_install:
 - gem install image_optim_pack
-install:
-- bundle install --path vendor/bundle
 script:
 - git config --global user.name '${GIT_NAME}'
 - git config --global user.email '${GIT_EMAIL}'
 - git remote set-url origin https://beanieboi:${GH_TOKEN}@github.com/beanieboi/abwesend.com.git
-- bundle exec rake publish
+- ALLOW_DIRTY=1 bundle exec rake publish
 branches:
   only:
   - master
