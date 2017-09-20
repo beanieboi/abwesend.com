@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-# Middleman Gems
-gem 'middleman', '>= 4.0.0'
-gem 'middleman-livereload'
-gem 'middleman-gh-pages'
-
+gem 'middleman', '~> 4.2'
+gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman-deploy', github: 'beanieboi/middleman-deploy'
+gem 'travis'

@@ -1,0 +1,21 @@
+language: ruby
+rvm:
+- 2.2.3
+before_install:
+- rvm install 2.4.1
+install:
+- bundle install --path vendor/bundle
+script:
+- git config --global user.name '${GIT_NAME}'
+- git config --global user.email '${GIT_EMAIL}'
+- git remote set-url origin https://beanieboi:${GH_TOKEN}@github.com/beanieboi/abwesend.com.git
+- bundle exec middleman build
+- bundle exec middleman deploy
+branches:
+  only:
+  - master
+env:
+  global:
+  - secure: syMNcmNOFtAY6Ul5W7lZPbscP6WNUQNyKdjEI5Eog4bt3rPaLFeDygtQRPtvZzpvCd3yHqcKBQccPttkkGBskUmGFLOr8EGy0kipgQDVASMT4ptyRTe2mKcLWGDUr502BTlTysxYKsS8uPrXTy0ZznrFisovVwCzhH7jze4lMxE=
+  - secure: R5at7Z7nm6IzIN/jSy0AcnSTa6aMZSl2hrVbbsjJwCxl9aMpKjnOOUCd6THrvWXpH2UuYjdPbOrKcZljlLu5qNEWtC2KP8gyTKi1rhJn5iWsFhPDcgQpUwyT9Wmnr0317QHDdZUbwhMVpc6B9c9ITx6/WuGvvUBOWppTyORSAlg=
+  - secure: tYPFg8rKfW57N6UyfPEaz8zTIIREAcMNWH76F9zcu17fzHlYzX61ZdMSdpiB3ONBCcsE4L6GcACylzSuplQFO+6nFTwMfsxUstalAvt87XzrSGADFeN8TgQx4ZRnhYtI2MBvZQGZ8UsTzWA3y+TIM0oaRhumvT56iEPBjP6Rw+A=
