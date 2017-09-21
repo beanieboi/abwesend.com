@@ -40,14 +40,12 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-activate :gzip
-
 activate :inline
-
-activate :minify_html
 
 configure :build do
   activate :minify_css, inline: true
   activate :minify_javascript
   activate :asset_hash
+  activate :gzip
+  activate :minify_html
 end
