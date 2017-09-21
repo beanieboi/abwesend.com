@@ -1,6 +1,4 @@
 language: ruby
-before_install:
-- gem install image_optim_pack
 script:
 - git config --global user.name 'travis-deploy'
 - git config --global user.email 'travis-deploy@abwesend.com'

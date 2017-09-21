@@ -46,13 +46,6 @@ activate :inline
 
 activate :minify_html
 
-activate :imageoptim do |options|
-  options.allow_lossy = true
-  options.jpegoptim = { strip: ['all'], max_quality: 85 }
-  options.pngout    = false
-  options.svgo      = false
-end
-
 configure :build do
   activate :minify_css, inline: true
   activate :minify_javascript
