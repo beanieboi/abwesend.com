@@ -1,5 +1,9 @@
+.PHONY: install
+install:
+	bundle
+
 .PHONY: build
-build:
+build: install
 	bundle exec middleman build
 
 .PHONY: publish
