@@ -3,7 +3,7 @@ workflow "Build and Publish" {
   resolves = ["publish"]
 }
 
-action "Publish" {
+action "publish" {
   uses = "actions/action-builder/shell@master"
   runs = "make"
   args = "publish"
