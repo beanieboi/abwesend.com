@@ -3,8 +3,9 @@ workflow "Build and Publish" {
   resolves = ["publish"]
 }
 
-action "publish" {
+action "Publish" {
   uses = "actions/action-builder/shell@master"
-  runs = "ALLOW_DIRTY=1 bundle exec rake publish"
+  runs = "make"
+  args = "publish"
   secrets = ["GITHUB_TOKEN"]
 }
