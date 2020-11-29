@@ -112,7 +112,7 @@ GEM
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
-    rack (2.0.6)
+    rack (2.2.3)
     rake (12.3.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
