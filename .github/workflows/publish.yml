@@ -12,8 +12,15 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up Ruby ${{ matrix.ruby-version }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
       - name: Install and Build 🔧
         run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
           make build
 
       - name: Deploy 🚀
