@@ -5,5 +5,3 @@ gem 'middleman-autoprefixer', '~> 2.7'
 gem 'middleman-gh-pages'
 gem 'middleman-inline'
 gem 'middleman-minify-html'
-
-gem 'travis'
