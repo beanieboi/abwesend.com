@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~> 4.2'
-gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman', git: 'https://github.com/middleman/middleman.git', branch: '4.x'
+gem 'middleman-autoprefixer'
 gem 'middleman-gh-pages'
 gem 'middleman-inline'
 gem 'middleman-minify-html'
