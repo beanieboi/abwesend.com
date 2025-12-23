@@ -4,8 +4,16 @@ install:
 
 .PHONY: build
 build: install
-	bundle exec middleman build
+	bundle exec jekyll build
+
+.PHONY: serve
+serve: install
+	bundle exec jekyll serve
 
 .PHONY: publish
-publish: install
-	ALLOW_DIRTY=1 bundle exec rake publish
+publish: build
+	cd _site && \
+	git init && \
+	git add -A && \
+	git commit -m "Deploy to GitHub Pages" && \
+	git push -f origin HEAD:gh-pages

@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>{{ page.title | default: site.title }}</title>
+    <meta charset="UTF-8"/>
+    <meta name="keywords" content="Benjamin Fritsch, ben, beanie, beanieboi"/>
+    <style>{% capture scss %}{% include abwesend.scss %}{% endcapture %}{{ scss | scssify }}</style>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height" />
+    <meta name="description" content="{{ site.description }}">
+  </head>
+  <body>
+    <div class="content">
+      {{ content }}
+    </div>
+  </body>
+</html>

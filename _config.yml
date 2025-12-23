@@ -1,0 +1,24 @@
+title: abwesend but alive
+description: Benjamin Fritsch, a software developer
+url: https://abwesend.com
+
+# Build settings
+markdown: kramdown
+sass:
+  style: compressed
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - README.md
+  - vendor
+
+# Plugins
+plugins:
+  - jekyll-minifier
+
+# Minifier settings
+jekyll-minifier:
+  remove_intertag_spaces: true
